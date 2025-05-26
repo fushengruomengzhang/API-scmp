@@ -1,4 +1,3 @@
-
 # 截图概览
 
 ![输入图片说明](readme/img/760e0e64c9b74beab0c5ae044851f1ea.png)
@@ -6,10 +5,13 @@
 ![输入图片说明](readme/img/e7dff9f75ff94b47888e8053effa2706.png)
 
 # 本地部署
+
 ## 下载资源
-下载本仓库即可
-资源包含 scmp.jar   sqlit-db.db  static
+
+下载本仓库即可,从source目录获取资源,包含 scmp.jar sqlit-db.db static
+
 ## 启动脚本
+
 ```shell
 java -jar scmp.jar \
 	--db.type=sqlit \
@@ -17,11 +19,14 @@ java -jar scmp.jar \
 	--project.location-file-path=file:./static/ \ # 配置为你的static目录路径
 	--spring.profiles.active=pro >/dev/null 2>&1 & # 如果要控制台启动，可以不使用这一行，同时注意去掉上一行结果的反斜杠/
 ```
-# 此项目也可以支持服务器部署，如有需要同我联系
-邮箱：17610759800@163.com   qq:1270622569 微信: zfs1270622569
-## 访问
-[http://127.0.0.1:3500/scmp/static/index.html#/request/api](http://192.168.18.191:3500/scmp/static/index.html#/request/api)
 
+# 此项目也可以支持服务器部署，如有需要同我联系
+
+邮箱：17610759800@163.com qq:1270622569 微信: zfs1270622569
+
+## 访问
+
+[http://127.0.0.1:3500/scmp/static/index.html#/request/api](http://192.168.18.191:3500/scmp/static/index.html#/request/api)
 
 # Setting-Config
 
