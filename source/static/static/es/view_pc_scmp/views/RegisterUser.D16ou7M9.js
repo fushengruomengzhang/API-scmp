@@ -1,0 +1,1 @@
+import{_ as e}from"../../components/address/S3Address.BvGSUWFm.js";import"../../vue.CpRb0aFL.js";const t={name:"RegisterUser",components:{},setup(){return{}},emits:[],props:{},data(){return{}},computed:{},watch:{},created(){},mounted(){},methods:{}};function r(s,o,n,c,p,a){return null}const d=e(t,[["render",r]]);export{d as default};

@@ -13,8 +13,8 @@
 ```shell
 java -jar scmp.jar \
 	--db.type=sqlit \
-	--spring.datasource.url=jdbc:sqlite:/root/scmp/sqlit-db.db \ # 配置为你的salit-db.db 路径
-	--project.location-file-path=file:/root/scmp2/static/ \ # 配置为你的static目录路径
+	--spring.datasource.url=jdbc:sqlite:./sqlit-db.db \ # 配置为你的salit-db.db 路径
+	--project.location-file-path=file:./static/ \ # 配置为你的static目录路径
 	--spring.profiles.active=pro >/dev/null 2>&1 & # 如果要控制台启动，可以不使用这一行，同时注意去掉上一行结果的反斜杠/
 ```
 # 此项目也可以支持服务器部署，如有需要同我联系

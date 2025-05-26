@@ -1,0 +1,1 @@
+const t=document.getElementById("loading-mask")||{remove(){}},a=e=>{const o=document.querySelector("#loading-mask .loading-text");o&&(o.textContent=e)},l=()=>t.remove(),d=e=>new Promise((o,n)=>e(a,o,n)).finally(l);export{d as l};
