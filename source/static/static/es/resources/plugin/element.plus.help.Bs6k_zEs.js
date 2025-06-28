@@ -1,0 +1,1 @@
+import{Z as l,$ as t,a0 as n}from"../../.store.ssRjOe-B.js";const i={install(o){Object.entries(l).forEach(([e,s])=>o.component(e,s)),o.config.globalProperties.$message=e=>t({showClose:!0,grouping:!0,...e})&&!1,o.config.globalProperties.$notify=e=>n(e)&&!1}};export{i as E};
