@@ -20,6 +20,10 @@ java -jar scmp.jar \
 	--spring.profiles.active=pro >/dev/null 2>&1 & # 如果要控制台启动，可以不使用这一行，同时注意去掉上一行结果的反斜杠/
 ```
 
+```batch
+java -jar .\scmp.jar --db.type=sqlit --spring.datasource.url=jdbc:sqlite:./sqlit-db.db --project.location-file-path=file:./static/
+```
+
 # 此项目也可以支持服务器部署，如有需要同我联系
 
 邮箱：17610759800@163.com qq:1270622569 微信: zfs1270622569
