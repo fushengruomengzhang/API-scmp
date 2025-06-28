@@ -8,16 +8,7 @@
 
 ## 下载资源
 
-下载本仓库即可,从source目录获取资源,包含 scmp.jar lib/other.zip sqlit-db.db static
-
-## 释放资源
-
-```shell
-# 在lib目录下新建other目录，将other.zip的内容解压到other目录下。lib/other/*.jar
-cd ./lib && mkdir other 
-cd other && cp ../other.zip ./
-unzip other.zip && rm -rf other.zip
-```
+下载本仓库即可,从source目录获取资源,包含 scmp.jar lib/other/*.jar sqlit-db.db static
 
 ## 启动脚本
 
