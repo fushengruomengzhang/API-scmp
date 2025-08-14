@@ -1,0 +1,1 @@
+import{E as l,a as t,b as i,c as n}from"../../element.Wp2uzu44.js";const a={install(o){Object.entries(l).forEach(([e,s])=>o.component(e,s)),o.config.globalProperties.$message=e=>t({showClose:!0,grouping:!0,...e})&&!1,o.config.globalProperties.$notify=e=>i(e)&&!1,o.config.globalProperties.$confirm=e=>n.confirm(e)}};export{a as E};

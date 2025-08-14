@@ -1,0 +1,1 @@
+.s3-rrule{width:50%!important;min-width:60rem;display:flex;flex-direction:column}.s3-rrule .rrule-config{display:flex;flex-direction:column;max-height:30rem;overflow:auto}.rrule-result .rrule-data:empty:before{content:attr(placeholder);color:#a9abb2}.rrule-result .rrule-data{display:flex;flex-wrap:wrap;white-space:nowrap}.rrule-result .rrule-data .date{margin-left:1rem}
