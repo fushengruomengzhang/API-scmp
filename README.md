@@ -47,7 +47,7 @@ java -jar .\scmp.jar --db.type=sqlit --spring.datasource.url=jdbc:sqlite:./sqlit
 
 # 使用文档
 
-[NBA-API.md](使用文档)
+[使用文档](NBA-API.md)
 
 # 感谢打赏
 
