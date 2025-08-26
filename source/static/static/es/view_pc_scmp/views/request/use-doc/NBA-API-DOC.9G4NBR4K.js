@@ -1,51 +1,4 @@
-# 项目概要
-
-本仓库（scmp）是一个多功能的 API 管理与测试平台，旨在为开发者和测试人员提供便捷的 API 管理、配置、调试和文档生成服务。主要特性如下：
-
-- 支持 API 分组管理。
-- 内置多种 API 测试功能。
-- 支持 RESTful API，支持多种请求方法和自定义请求头、参数、Body 等。
-- 可视化配置和拖拽排序。
-- 集成 Swagger 文档解析，方便快速查看已有 API 文档。
-
-本项目适合中大型团队协作及个人项目 API 管理需求，详细使用方法与功能介绍请参考仓库中的 README.md 文件。
-
-# 截图概览
-
-![输入图片说明](readme/img/760e0e64c9b74beab0c5ae044851f1ea.png)
-![输入图片说明](readme/img/17e4047a0b154b919815675473c48451.png)
-![输入图片说明](readme/img/e7dff9f75ff94b47888e8053effa2706.png)
-
-# 本地部署
-
-## 下载资源
-
-下载本仓库即可,从source目录获取资源,包含 scmp.jar lib/other/*.jar sqlit-db.db static
-
-## 启动脚本
-
-```shell
-java -jar scmp.jar \
-	--db.type=sqlit \
-	--spring.datasource.url=jdbc:sqlite:./sqlit-db.db \ # 配置为你的salit-db.db 路径
-	--project.location-file-path=file:./static/ \ # 配置为你的static目录路径
-	--project.socket.ports=3501 \ # webSocket 端口配置
-	--spring.profiles.active=pro >/dev/null 2>&1 & # 如果要控制台启动，可以不使用这一行，同时注意去掉上一行结果的反斜杠/
-```
-
-```batch
-java -jar .\scmp.jar --db.type=sqlit --spring.datasource.url=jdbc:sqlite:./sqlit-db.db --project.location-file-path=file:./static/
-```
-
-# 此项目也可以支持服务器部署，如有需要同我联系
-
-邮箱：17610759800@163.com qq:1270622569 微信: zfs1270622569
-
-## 访问
-
-[http://127.0.0.1:3500/scmp/static/index.html#/request/api](http://127.0.0.1:3500/scmp/static/index.html#/request/api)
-
-<iframe style='width:100%;height:100%;overflow:auto' src="./NBA-API.md"></iframe>
+import{s as i}from"../../../../resources/util/snowflake.util.DJSxTvR5.js";import{l as P}from"../../../../resources/global/global.util.DpEaw1_2.js";import{_ as I}from"../../../../components/address/S3Address.Dtr4TMCC.js";import{a as m,e as s,w as c,r as p,o as u}from"../../../../vue.XkSFAW2Q.js";import"../../../../resources/util/machine.code.util.H1Gamunq.js";import"../../../../resources/util/crypto.util.De05Bpu1.js";import"../../../../crypto.tqJ8oQci.js";import"../../../../antlr4.BZgrZd6q.js";import"../../../../js.By5wATmN.js";import"../../../../md5.DCeuUgf6.js";import"../../../../charenc.DHEmDxqN.js";import"../../../../mitt.C1xD_ZTF.js";const h=`<div class='title'>NBA-API-使用帮助</div>
 
 # Setting-Config
 
@@ -77,12 +30,12 @@ java -jar .\scmp.jar --db.type=sqlit --spring.datasource.url=jdbc:sqlite:./sqlit
 
 > 建议如下
 
-```mermaid 
+\`\`\`mermaid 
 graph LR;
     Project("项目") --> Module("模块");
     Module --> Controller("Controller || REST");
     Controller --> Method("方法（具体的api）");
-```
+\`\`\`
 
 ## 新建/编辑
 
@@ -227,7 +180,7 @@ graph LR;
     * 提供一个函数名为buildMessage的函数,发送webSocket参数前,会调用该函数
     * buildParam 和 buildMessage 两个函数,具体描述请看下边的js代码
 
-```js
+\`\`\`js
 // Script 参数处理脚本
 /**
  * 处理Query Body(json/...)的参数
@@ -254,7 +207,7 @@ function buildMessage(message) {
   // 自定义参数处理
   return message;
 }
-```
+\`\`\`
 
 ## API 执行结果
 
@@ -288,7 +241,7 @@ function buildMessage(message) {
 * 允许运行用户脚本;找到插件,右键选择管理扩展程序,开启允许运行用户脚本
 * 添加如下脚本
 
-```js
+\`\`\`js
 // ==UserScript==
 // @name         CORS Script
 // @namespace    http://tampermonkey.net/
@@ -307,7 +260,7 @@ function buildMessage(message) {
   'use strict';
   // 支持本地测试
   unsafeWindow._GM_xmlHttpRequest = GM?.xmlHttpRequest || GM_xmlhttpRequest;
-```
+\`\`\`
 
 ### API 文档同步
 
@@ -343,8 +296,4 @@ function buildMessage(message) {
 
 > 定时任务调度中心
 
-* 支持Cron 表达式,以及RRULE规则表达式
-
-# 感谢打赏
-
-![输入图片说明](readme/img/PayCode.3S_454e6.jpg)
+* 支持Cron 表达式,以及RRULE规则表达式`,y={name:"NBA-API-DOC",components:{},setup(){return{}},emits:[],props:{},data(){return{doc:h,folders:[]}},computed:{el(){return this.$refs.docWrapper.$el}},watch:{},created(){},mounted(){},methods:{handleNodeClick(t){const n=this.el.querySelector(`[data-tree-id='${t.uniFlag}']`);n&&n.scrollIntoView({behavior:"smooth"})},onDocChange(){let t=[],n=[],A=0;Array.from(this.el.querySelectorAll("h1,h2,h3,h4,h5,h6")).map((o,l)=>{const a=parseInt(o.tagName.slice(1),10),r=i("dti_");o.setAttribute("data-tree-id",r);const e={id:++A,pid:0,label:o.textContent.trim(),uniFlag:r};for(;n.length&&n[n.length-1].level>=a;)n.pop();n.length>0&&(e.pid=n[n.length-1].id),n.push({...e,level:a}),t.push(e)}),this.folders=P(t,"id","pid")}}},f={class:"nba-api-doc"};function g(t,n,A,o,l,a){const r=p("el-tree"),e=p("s3-scroll"),d=p("s3-doc");return u(),m("div",f,[s(e,{class:"folder"},{default:c(()=>[s(r,{data:l.folders,onNodeClick:a.handleNodeClick},null,8,["data","onNodeClick"])]),_:1}),s(e,null,{default:c(()=>[s(d,{ref:"docWrapper",class:"wrapper_detail",content:l.doc,onChange:a.onDocChange},null,8,["content","onChange"])]),_:1})])}const B=I(y,[["render",g],["__scopeId","data-v-7565919b"]]);export{B as default};
