@@ -1,4 +1,4 @@
-<div class='title'>NBA-API-使用帮助</div>
+import{s as d}from"../../../../resources/util/snowflake.util.DJSxTvR5.js";import{l as i}from"../../../../resources/global/global.util.DXG6QWD1.js";import{_ as I}from"../../../../components/address/S3Address.C5UI_yaZ.js";import{a as m,e as s,w as P,r as p,o as u}from"../../../../vue_runtime.BlNIPsXe.js";import"../../../../resources/util/machine.code.util.H1Gamunq.js";import"../../../../resources/util/crypto.util.De05Bpu1.js";import"../../../../crypto.tqJ8oQci.js";import"../../../../antlr4.BZgrZd6q.js";import"../../../../js.By5wATmN.js";import"../../../../md5.DCeuUgf6.js";import"../../../../charenc.DHEmDxqN.js";import"../../../../vue_reactivity.Ce-kYa2s.js";import"../../../../vue_shared.CTYdyN8k.js";const h=`<div class='title'>NBA-API-使用帮助</div>
 
 # 特色
 
@@ -77,12 +77,12 @@
 
 > 建议如下
 
-```mermaid 
+\`\`\`mermaid 
 graph LR;
     Project("项目") --> Module("模块");
     Module --> Controller("Controller || REST");
     Controller --> Method("方法（具体的api）");
-```
+\`\`\`
 
 ## 新建/编辑
 
@@ -243,7 +243,7 @@ graph LR;
     * Use This Version: 使用当前版本
     * Clear Cache: 仅清除该API对应的版本记录
 
-```js
+\`\`\`js
 // Script 参数处理脚本
 /**
  * 处理Query Body(json/...)的参数
@@ -270,7 +270,7 @@ function buildMessage(message) {
   // 自定义参数处理
   return message;
 }
-```
+\`\`\`
 
 ## API 执行结果
 
@@ -304,7 +304,7 @@ function buildMessage(message) {
 * 允许运行用户脚本;找到插件,右键选择管理扩展程序,开启允许运行用户脚本
 * 添加如下脚本
 
-```js
+\`\`\`js
 // ==UserScript==
 // @name         CORS Script
 // @namespace    http://tampermonkey.net/
@@ -322,7 +322,7 @@ function buildMessage(message) {
   // 注: 修改 @match 为你自己的路径 // 支持本地测试
   unsafeWindow._GM_xmlHttpRequest = GM?.xmlHttpRequest || GM_xmlhttpRequest;
 })
-```
+\`\`\`
 
 # API使用文档
 
@@ -351,4 +351,4 @@ function buildMessage(message) {
 
 > 定时任务调度中心
 
-* 支持Cron 表达式,以及RRULE规则表达式
+* 支持Cron 表达式,以及RRULE规则表达式`,y={name:"NBA-API-DOC",components:{},setup(){return{}},emits:[],props:{},data(){return{doc:h,folders:[]}},computed:{el(){return this.$refs.docWrapper.$el}},watch:{},created(){},mounted(){},methods:{handleNodeClick(t){const n=this.el.querySelector(`[data-tree-id='${t.uniFlag}']`);n&&n.scrollIntoView({behavior:"smooth"})},onDocChange(){let t=[],n=[],A=0;Array.from(this.el.querySelectorAll("h1,h2,h3,h4,h5,h6")).map((o,l)=>{const a=parseInt(o.tagName.slice(1),10),r=d("dti_");o.setAttribute("data-tree-id",r);const e={id:++A,pid:0,label:o.textContent.trim(),uniFlag:r};for(;n.length&&n[n.length-1].level>=a;)n.pop();n.length>0&&(e.pid=n[n.length-1].id),n.push({...e,level:a}),t.push(e)}),this.folders=i(t,"id","pid")}}},S={class:"nba-api-doc"};function f(t,n,A,o,l,a){const r=p("el-tree"),e=p("s3-scroll"),c=p("s3-doc");return u(),m("div",S,[s(e,{class:"folder"},{default:P(()=>[s(r,{data:l.folders,onNodeClick:a.handleNodeClick},null,8,["data","onNodeClick"])]),_:1}),s(e,null,{default:P(()=>[s(c,{ref:"docWrapper",class:"wrapper_detail",content:l.doc,onChange:a.onDocChange},null,8,["content","onChange"])]),_:1})])}const B=I(y,[["render",f],["__scopeId","data-v-7565919b"]]);export{B as default};
