@@ -22,7 +22,9 @@
 
 ## 下载资源
 
-下载[Github](https://github.com/fushengruomengzhang/API-scmp)或者[Gitee](https://gitee.com/fusheng_zhang/API-scmp)即可,从source目录获取资源,包含 scmp.jar lib/other/*.jar sqlit-db.db static
+> 从[https://github.com/fushengruomengzhang/API-scmp](https://github.com/fushengruomengzhang/API-scmp)
+> 或者[https://gitee.com/fusheng_zhang/API-scmp](https://gitee.com/fusheng_zhang/API-scmp)下载,
+> 从source目录获取资源,包含 scmp.jar lib/other/*.jar sqlit-db.db static
 
 ## 启动脚本
 
