@@ -25,6 +25,8 @@
 
 ## 启动脚本
 
+> jdk8
+
 ```shell
 java -jar scmp.jar \
 	--db.type=sqlit \
