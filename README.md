@@ -21,7 +21,7 @@
 
 ## 下载资源
 
-下载本仓库即可,从source目录获取资源,包含 scmp.jar lib/other/*.jar sqlit-db.db static
+下载[Github](https://github.com/fushengruomengzhang/API-scmp)或者[Gitee](https://gitee.com/fusheng_zhang/API-scmp)即可,从source目录获取资源,包含 scmp.jar lib/other/*.jar sqlit-db.db static
 
 ## 启动脚本
 
@@ -47,6 +47,10 @@ java -jar .\scmp.jar --db.type=sqlit --spring.datasource.url=jdbc:sqlite:./sqlit
 ## 访问
 
 [http://127.0.0.1:3500/scmp/static/index.html#/request/api](http://127.0.0.1:3500/scmp/static/index.html#/request/api)
+
+# 试用地址
+
+[http://182.92.210.97/scmp/static/index.html#/request/api](http://182.92.210.97/scmp/static/index.html#/request/api)
 
 # 使用文档
 
