@@ -12,9 +12,10 @@
 
 # 截图概览
 
-![输入图片说明](readme/img/760e0e64c9b74beab0c5ae044851f1ea.png)
-![输入图片说明](readme/img/17e4047a0b154b919815675473c48451.png)
-![输入图片说明](readme/img/e7dff9f75ff94b47888e8053effa2706.png)
+![API测试页面](readme/img/1.API_Detail.png)
+![API文档页面](readme/img/2.API_DOC_Detail.png)
+![API文档分享页面](readme/img/3.Share_API_DOC_Detail.png)
+![定时任务调度中心](readme/img/4.scheduler.png)
 
 # 本地部署
 
