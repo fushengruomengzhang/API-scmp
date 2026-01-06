@@ -1,0 +1,1 @@
+import{c,b as s}from"../../vue.CuKbW8T6.js";const h=(o,{loginName:a,checkAuthorization:u=()=>!0,checkAuth:f=()=>!0,setErrorMsg:i=()=>{}})=>{const t=c({history:s(),routes:o});return t.beforeEach((r,m,e)=>r.meta.skipAuth?e():u()?f(r.meta.flag)?e():(i("您正在尝试访问未授权的资源."),e({name:"error"})):e({name:a})),t.afterEach((r,m)=>document.title=`${r.meta.title||"Project"}`),t};export{h as r};
