@@ -22,8 +22,8 @@
 
 ## 下载资源
 
-> 从[https://github.com/fushengruomengzhang/API-scmp](https://github.com/fushengruomengzhang/API-scmp)
-> 或者[https://gitee.com/fusheng_zhang/API-scmp](https://gitee.com/fusheng_zhang/API-scmp)下载,
+> 从[https://github.com/fushengruomengzhang/API-scmp](https://github.com/fushengruomengzhang/API-scmp)  
+> 或者[https://gitee.com/fusheng_zhang/API-scmp](https://gitee.com/fusheng_zhang/API-scmp)下载,  
 > 从source目录获取资源,包含 scmp.jar lib/other/*.jar sqlit-db.db static
 
 ## 启动脚本
@@ -45,7 +45,7 @@ java -jar .\scmp.jar --db.type=sqlit --spring.datasource.url=jdbc:sqlite:./sqlit
 
 # 此项目也可以支持服务器部署，如有需要同我联系
 
-> 当前提供的所有代码,也可以在服务器布局,使用的数据库是sqlit.同时也支持mysql8数据,需要的同我联系
+> 当前提供的所有代码,也可以在服务器布局,使用的数据库是sqlit.同时也支持mysql8数据,需要的同我联系  
 > 邮箱：17610759800@163.com qq:1270622569 微信: zfs1270622569
 
 ## 访问
