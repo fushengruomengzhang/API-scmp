@@ -43,9 +43,9 @@ java -jar scmp.jar \
 java -jar .\scmp.jar --db.type=sqlit --spring.datasource.url=jdbc:sqlite:./sqlit-db.db --project.location-file-path=file:./static/
 ```
 
-# 此项目也可以支持服务器部署，如有需要同我联系
+# 数据库
 
-> 当前提供的所有代码,也可以在服务器布局,使用的数据库是sqlit.同时也支持mysql8数据,需要的同我联系  
+> 当前提供的所有代码,也可以在服务器布局,使用的数据库是sqlit.同时也支持mysql8数据库,比sqlit稳定,需要的同我联系  
 > 邮箱：17610759800@163.com qq:1270622569 微信: zfs1270622569
 
 ## 访问
