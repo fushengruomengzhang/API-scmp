@@ -1,0 +1,1 @@
+import{a as n}from"../../../dep/antlr4.js";class E extends n.error.DefaultErrorStrategy{reportError(r,e){}recoverInline(r){return r.consume(),null}syntaxError(r,e,t,s,a,c){}recover(r,e){r.getTokenStream().consume()}sync(r){}}class i extends Error{}export{E as A,i as S};

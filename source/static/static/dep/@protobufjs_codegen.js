@@ -1,0 +1,4 @@
+var f=d;function d(e,v){typeof e=="string"&&(v=e,e=void 0);var w=[];function h(n){if(typeof n!="string"){var l=y();if(d.verbose&&console.log("codegen: "+l),l="return "+l,n){for(var i=Object.keys(n),a=new Array(i.length+1),b=new Array(i.length),r=0;r<i.length;)a[r]=i[r],b[r]=n[i[r++]];return a[r]=l,Function.apply(null,a).apply(null,b)}return Function(l)()}for(var u=new Array(arguments.length-1),t=0;t<u.length;)u[t]=arguments[++t];if(t=0,n=n.replace(/%([%dfijs])/g,function(F,j){var g=u[t++];switch(j){case"d":case"f":return String(Number(g));case"i":return String(Math.floor(g));case"j":return JSON.stringify(g);case"s":return String(g)}return"%"}),t!==u.length)throw Error("parameter count mismatch");return w.push(n),h}function y(n){return"function "+(n||v||"")+"("+(e&&e.join(",")||"")+`){
+  `+w.join(`
+  `)+`
+}`}return h.toString=y,h}d.verbose=!1;export{f as c};

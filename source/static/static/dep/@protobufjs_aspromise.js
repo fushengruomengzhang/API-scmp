@@ -1,0 +1,1 @@
+var f=m;function m(g,c){for(var n=new Array(arguments.length-1),l=0,t=2,e=!0;t<arguments.length;)n[l++]=arguments[t++];return new Promise(function(h,i){n[l]=function(s){if(e)if(e=!1,s)i(s);else{for(var a=new Array(arguments.length-1),r=0;r<a.length;)a[r++]=arguments[r];h.apply(null,a)}};try{g.apply(c||null,n)}catch(u){e&&(e=!1,i(u))}})}export{f as a};
