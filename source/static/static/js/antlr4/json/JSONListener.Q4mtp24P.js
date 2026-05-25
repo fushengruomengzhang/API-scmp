@@ -1,1 +1,0 @@
-import{a as t}from"../../../dep/antlr4.js";class c extends t.tree.ParseTreeListener{enterJson(e){}exitJson(e){}enterObj(e){}exitObj(e){}enterPair(e){}exitPair(e){}enterArr(e){}exitArr(e){}enterValue(e){}exitValue(e){}}export{c as J};

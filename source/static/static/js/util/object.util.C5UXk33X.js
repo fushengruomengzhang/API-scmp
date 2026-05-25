@@ -1,1 +1,0 @@
-function t(r){return r===null||r===void 0||r===void 0?!0:typeof r=="string"?r.trim()==="":Array.isArray(r)?r.length===0:typeof r=="object"?Object.keys(r).length===0:!1}function e(r){return!Object.isBlank(r)}const n={isBlank:t,isNotBlank:e};export{n as o};

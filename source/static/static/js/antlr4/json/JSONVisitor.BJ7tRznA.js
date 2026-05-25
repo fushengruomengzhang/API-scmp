@@ -1,1 +1,0 @@
-import{a as r}from"../../../dep/antlr4.js";class e extends r.tree.ParseTreeVisitor{visitJson(i){return this.visitChildren(i)}visitObj(i){return this.visitChildren(i)}visitPair(i){return this.visitChildren(i)}visitArr(i){return this.visitChildren(i)}visitValue(i){return this.visitChildren(i)}}export{e as J};
