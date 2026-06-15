@@ -1,1 +1,0 @@
-import{_ as e}from"./index.C4r6838e.js";import"./vendor.Bk-I8i7j.js";import"../../public.scmp.config.js";const t={name:"RegisterUser",components:{},setup(){return{}},emits:[],props:{},data(){return{}},computed:{},watch:{},created(){},mounted(){},methods:{}};function r(s,o,n,p,c,a){return null}const i=e(t,[["render",r]]);export{i as default};
