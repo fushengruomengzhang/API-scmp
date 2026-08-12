@@ -1,0 +1,1 @@
+import{_ as t}from"./index.B0VOvdBr.js";import"./vendor.D17dXXot.js";import"./async.component.20260812.js";import"../../public.scmp.config.js";const e={name:"RegisterUser",components:{},setup(){return{}},emits:[],props:{},data(){return{}},computed:{},watch:{},created(){},mounted(){},methods:{}};function r(o,s,n,p,c,a){return null}const _=t(e,[["render",r]]);export{_ as default};
