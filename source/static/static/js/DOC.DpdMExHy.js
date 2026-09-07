@@ -1,4 +1,4 @@
-<div class='title'>NBA-API 使用手册（完整版）</div>
+import{_ as d,s as I,a as u}from"./index.8KvnA3xd.js";import{o as p,k as g,a as s,w as c,r as l}from"./vendor.Bm8fCFxr.js";import"./async.component.20260907.js";import"../../public.scmp.config.js";const P=`<div class='title'>NBA-API 使用手册（完整版）</div>
 
 > 浏览器端团队 API 平台：**测接口、写文档、定时调度、群聊与 AI** 一体。  
 > 左侧帮助目录与侧栏模块同序：API → Swagger 试跑 → 组合文档 → 定时 → 群聊与 AI → 配置。
@@ -18,18 +18,18 @@
 | **Swagger 试跑** | 填 OpenAPI / Swagger 地址 → 左树点接口 → 右侧执行<br>不写入 API 库                                    |
 | **组合文档**       | 多接口业务流程说明<br>协同编辑、分享 / 下载                                                             |
 | **定时任务**       | CRON / RRULE / 时间戳<br>直接关联 API                                                        |
-| **群聊与 AI**     | 实时群聊；群内 `@AI助手`、本机会话、发送到群<br>DeepSeek / 千问 / 千帆 / 本地模型；密钥仅存本机                         |
+| **群聊与 AI**     | 实时群聊；群内 \`@AI助手\`、本机会话、发送到群<br>DeepSeek / 千问 / 千帆 / 本地模型；密钥仅存本机                         |
 | **配置**         | 用户名与角色、全局 Header<br>远程/本地域名、PluginReq、自动保存                                            |
 
 ## 产品亮点
 
 1. **PluginReq — 远程页面直连本机服务**
-   > 工具部署在内网/远程服务器，目标 API 在开发者本机 `localhost` / `127.0.0.1` 时，
+   > 工具部署在内网/远程服务器，目标 API 在开发者本机 \`localhost\` / \`127.0.0.1\` 时，
    > 安装篡改猴插件并开启 PluginReq，请求由浏览器插件从本机发出，无需 Postman 客户端或额外代理。
    > 适合「工具服务器与 API 不在同一网段、但 PC 能访问目标服务」的联调场景（仅 HTTP，WebSocket 浏览器直连）。
 
 2. **全协议接口测试 — HTTP(S) / SSE / WS(S) 一站覆盖**
-   > 支持 GET / POST / PUT / DELETE 及 RESTFUL 路径参数（如 `/user/{id}`）；
+   > 支持 GET / POST / PUT / DELETE 及 RESTFUL 路径参数（如 \`/user/{id}\`）；
    > SSE 流式在「结果 N」的 **Data** 中实时更新；
    > WebSocket 连接、子协议、Query 鉴权、Message 多格式收发。
    > Body 支持 JSON5、multipart、表单；文件下载可「点我保存」。
@@ -38,7 +38,7 @@
    > **测**：目录树、多标签、域名 Context-Path / Prefix / Path 拼接。  
    > **写**：单接口预览、多 API 组合文档（协同 / 分享 / 下载）。  
    > **跑**：定时任务 CRON / RRULE / 时间戳关联 API 巡检。  
-   > **群聊 AI**：侧栏进入群聊；`@AI助手` 本机多轮，需要时「发送到群」；密钥仅存本机。
+   > **群聊 AI**：侧栏进入群聊；\`@AI助手\` 本机多轮，需要时「发送到群」；密钥仅存本机。
 
 4. **分享零安装 + 多端实时协同**
    > 单个 / 批量 / 已打开标签均可生成分享链接，接收方浏览器打开即测。
@@ -63,8 +63,8 @@
    > 上传 Java（Swagger 注解）生成字段文档，**To Body Param** 生成 JSON 示例。
 
 8. **脚本预处理 + 版本快照**
-   > `buildParam` / `buildMessage` 动态改写参数或消息；
-   > 脚本里 `console.*` 打到响应区 Console；
+   > \`buildParam\` / \`buildMessage\` 动态改写参数或消息；
+   > 脚本里 \`console.*\` 打到响应区 Console；
    > 版本快照回滚；
    > 自动保存开启后请求成功即更新有编辑的 API。
 
@@ -101,29 +101,29 @@
 
 ## 1.1 界面说明
 
-```
+\`\`\`
 左侧 API 树 ──▶ 右侧工作区
                   ├─ 标签页（已打开的 API）
                   ├─ URL 栏（方法 / 域名 / 路径 / 执行）
                   ├─ 配置区（Detail / Header / Query / Body / Message / Script / Version）
                   └─ 响应区（Console / RequestTime / 结果 N）
                      └─ 结果 N 内下拉：Data（响应体）/ Header（响应头）
-```
+\`\`\`
 
 | 视觉标记                                      | 含义                          |
 |-------------------------------------------|-----------------------------|
 | <font color="orange">**橘黄色**</font>文件夹/图钉 | **本地 API**（仅本机，不可分享、不可批量选择） |
-| 标签前 `*`                                   | 有未保存修改                      |
+| 标签前 \`*\`                                   | 有未保存修改                      |
 | <font color="red">红色</font>同步图标           | 他人已更新，点击拉取最新                |
 
 ## 1.2 推荐目录结构
 
-```
+\`\`\`
 项目
  └── 模块
       └── Controller（目录）
            └── 具体 API（叶子节点）
-```
+\`\`\`
 
 ## 1.3 远程 API 与本地 API
 
@@ -145,10 +145,10 @@
 | 存储          | **远程**（团队共享）/ **本地**（<font color="orange">橘黄</font>，仅本机） |
 | 父级          | 挂载位置                                                     |
 | 名称          | 目录或 API 名称                                               |
-| ContextPath | 如 `/api`；新建子级会继承                                         |
+| ContextPath | 如 \`/api\`；新建子级会继承                                         |
 | Prefix      | Controller 统一前缀；新建子级会继承                                  |
 | Method      | GET / POST / PUT / DELETE / **WS**                       |
-| Path        | 如 `/list` 或 `/user/{id}`                                 |
+| Path        | 如 \`/list\` 或 \`/user/{id}\`                                 |
 | SSEReq      | SSE 流式（HTTP 方法 POST / GET）                               |
 | PluginReq   | 插件代发（仅 HTTP，见 1.15）                                      |
 
@@ -180,11 +180,11 @@
 
 ## 1.7 请求地址
 
-```
+\`\`\`
 完整 URL = 域名 + ContextPath + Prefix + Path
-```
+\`\`\`
 
-域名从 **远程/本地域名配置** 下拉选择，须以 `http(s)://` 或 `ws(s)://` 开头。
+域名从 **远程/本地域名配置** 下拉选择，须以 \`http(s)://\` 或 \`ws(s)://\` 开头。
 
 ## 1.8 HTTP / SSE 接口测试
 
@@ -192,9 +192,9 @@
 
 | 操作     | 方式                                               |
 |--------|--------------------------------------------------|
-| 执行一次   | 点 **执行**，或 `Ctrl+Enter` / `⌘+Enter`<br>（出现「结果1」） |
+| 执行一次   | 点 **执行**，或 \`Ctrl+Enter\` / \`⌘+Enter\`<br>（出现「结果1」） |
 | 执行 N 次 | 执行按钮下拉 → **执行 N 次**<br>（N 在齿轮里配置；出现「结果1」…「结果N」）  |
-| 保存/更新  | `Ctrl+S` / `⌘+S`，或下拉 → **更新 API**                |
+| 保存/更新  | \`Ctrl+S\` / \`⌘+S\`，或下拉 → **更新 API**                |
 | 取消     | 执行中主按钮变为 **取消**<br>中止本轮还在进行的请求；**已经成功的「结果」仍保留**  |
 
 > 执行中**不能关闭**「结果 N」标签；须先取消或等待完成。
@@ -202,7 +202,7 @@
 
 ### RESTFUL
 
-Path 为 `/user/{id}` 时，在 **Query** 标签配置参数 `id` 及值。
+Path 为 \`/user/{id}\` 时，在 **Query** 标签配置参数 \`id\` 及值。
 
 ### SSE
 
@@ -240,7 +240,7 @@ Path 为 `/user/{id}` 时，在 **Query** 标签配置参数 `id` 及值。
 
 ### 能做什么
 
-- 浏览器直连 `ws://` / `wss://`
+- 浏览器直连 \`ws://\` / \`wss://\`
 - 握手时配置子协议（通过 Header 表）
 - URL 携带 Query 参数
 - 连接后多次发送消息
@@ -250,7 +250,7 @@ Path 为 `/user/{id}` 时，在 **Query** 标签配置参数 `id` 及值。
 
 | 项目        | HTTP         | WebSocket (WS)    |
 |-----------|--------------|-------------------|
-| 域名        | `http(s)://` | **`ws(s)://`**    |
+| 域名        | \`http(s)://\` | **\`ws(s)://\`**    |
 | 执行按钮      | 执行 / 取消      | **连接 / 关闭**       |
 | Body 标签   | 有            | **无**（改为 Message） |
 | 服务器代理     | 可以           | **始终浏览器直连**       |
@@ -261,7 +261,7 @@ Path 为 `/user/{id}` 时，在 **Query** 标签配置参数 `id` 及值。
 
 ### 使用流程
 
-```
+\`\`\`
 ① Method 选 WS
 ② 域名填 ws:// 或 wss://
 ③ 配置 ContextPath / Prefix / Path
@@ -271,20 +271,20 @@ Path 为 `/user/{id}` 时，在 **Query** 标签配置参数 `id` 及值。
 ⑦ Message 标签编辑消息 →「发送」
 ⑧ 「结果1」→ Data：查看 open / 消息 / error / closed
 ⑨ 点「关闭」断开
-```
+\`\`\`
 
 ### Header — 子协议映射
 
 浏览器 WebSocket **不能**像 HTTP 那样设置任意请求头。  
 本工具将 **Header 表中勾选的行** 映射为握手时的 **子协议（Sec-WebSocket-Protocol）**：
 
-```
+\`\`\`
 Header 每一行（已勾选、值非空、且参数名 ≠ Content-Type）
         │
         └──▶ 取「参数值」作为子协议名
                 │
                 └──▶ 连接时使用 [子协议1, 子协议2, ...]
-```
+\`\`\`
 
 | 规则         | 说明                            |
 |------------|-------------------------------|
@@ -292,7 +292,7 @@ Header 每一行（已勾选、值非空、且参数名 ≠ Content-Type）
 | 全局 + 局部合并  | 与 HTTP 相同：全局优先，局部仅补全局没有的 key  |
 | 多行 = 多个子协议 | 每行一个子协议值                      |
 
-**子协议 `chat` 示例：**
+**子协议 \`chat\` 示例：**
 
 | 参数名      | 参数值  | 勾选 |
 |----------|------|----|
@@ -307,11 +307,11 @@ Header 每一行（已勾选、值非空、且参数名 ≠ Content-Type）
 
 ### Token 鉴权
 
-Header 中的 `Authorization` **不会**作为 HTTP 头发送给 WS 握手。
+Header 中的 \`Authorization\` **不会**作为 HTTP 头发送给 WS 握手。
 
 | 方式            | 做法                                                |
 |---------------|---------------------------------------------------|
-| **Query（推荐）** | Query 加 `token=xxx` → `wss://host/path?token=xxx` |
+| **Query（推荐）** | Query 加 \`token=xxx\` → \`wss://host/path?token=xxx\` |
 | **Path**      | 写在路径中                                             |
 | **首条消息**      | Message 发送登录/鉴权 JSON                              |
 
@@ -334,16 +334,16 @@ Message 支持 json / text / xml / javascript；
 
 | 响应内容     | 含义    |
 |----------|-------|
-| `open`   | 连接成功  |
+| \`open\`   | 连接成功  |
 | 文本/数据    | 服务端消息 |
-| `error`  | 错误    |
-| `closed` | 已关闭   |
+| \`error\`  | 错误    |
+| \`closed\` | 已关闭   |
 
 ### 完整示例（STOMP）
 
-1. Method = **WS**，域名 = `wss://mq.example.com`，Path = `/ws`
-2. Header：参数值 `v12.stomp`，勾选
-3. Query：`token=your-jwt`，勾选
+1. Method = **WS**，域名 = \`wss://mq.example.com\`，Path = \`/ws\`
+2. Header：参数值 \`v12.stomp\`，勾选
+3. Query：\`token=your-jwt\`，勾选
 4. **连接** → Message 发 STOMP 帧 → 在「结果1」→ Data 查看
 
 ## 1.11 API 配置详解
@@ -416,75 +416,75 @@ Version 标签 → 查看版本记录 → 右键菜单：**use this version** / 
 
 | 菜单        | 作用                                                                               |
 |-----------|----------------------------------------------------------------------------------|
-| **初始化脚本** | 写入默认的 `getVersion` / `buildParam`<br>（WS 时还有 `buildMessage`）模板                   |
+| **初始化脚本** | 写入默认的 \`getVersion\` / \`buildParam\`<br>（WS 时还有 \`buildMessage\`）模板                   |
 | **运行脚本**  | **不发真实 HTTP/WS**<br>按当前 Query / Body / Message 走一遍脚本<br>日志与参数摘要打到响应区 **Console** |
 
 > 这里的「运行脚本」≠ 侧栏 **Swagger 试跑**。  
 > 前者只调试脚本；后者从 OpenAPI 树选接口再执行。
 
-脚本里可用 `console.log` / `info` / `warn` / `error` 等；  
+脚本里可用 \`console.log\` / \`info\` / \`warn\` / \`error\` 等；  
 输出在响应区 **Console**（不是浏览器 F12）。
 
 正式点 **执行** / WS **发送** 时也会跑同一套脚本，日志同样进 Console；  
 Console 里还能看到加工后的 Query / Body（或 Message）摘要，  
 用来核对实际会发出去的内容。
 
-### `getVersion`
+### \`getVersion\`
 
-```js
+\`\`\`js
 function getVersion(reqNum) {
   return 0; // <1：用当前编辑中的配置；≥1：用 Version 里第几版参数
 }
-```
+\`\`\`
 
-「执行 N 次」时 `reqNum` 为 1…N；「运行脚本」时一般为 0。返回 `≥1` 时按 **Version** 标签里对应版本取参数再加工。
+「执行 N 次」时 \`reqNum\` 为 1…N；「运行脚本」时一般为 0。返回 \`≥1\` 时按 **Version** 标签里对应版本取参数再加工。
 
-### HTTP / SSE — `buildParam`
+### HTTP / SSE — \`buildParam\`
 
 默认模板：
 
-```js
+\`\`\`js
 function buildParam(reqNum, key, value, path, desc, type, check) {
   return value;
 }
-```
+\`\`\`
 
 | 参数                        | 含义                    |
 |---------------------------|-----------------------|
-| `reqNum`                  | 第几次请求（「执行 N 次」时从 1…N） |
-| `key` / `value`           | 当前字段名与值               |
-| `path`                    | 字段路径                  |
-| `desc` / `type` / `check` | 描述、类型、是否勾选            |
+| \`reqNum\`                  | 第几次请求（「执行 N 次」时从 1…N） |
+| \`key\` / \`value\`           | 当前字段名与值               |
+| \`path\`                    | 字段路径                  |
+| \`desc\` / \`type\` / \`check\` | 描述、类型、是否勾选            |
 
 每次发请求前，会对 Query / JSON Body / 表单字段逐项调用；返回值作为实际发送值。适合加时间戳、签名、按次数变化的测试数据。
 
 **示例：签名字段 + 打日志**
 
-```js
+\`\`\`js
 function buildParam(reqNum, key, value, path, desc, type, check) {
   if (key === 'timestamp') return Date.now();
   if (key === 'nonce') {
-    const n = `n-${reqNum}-${Date.now()}`;
+    const n = \`n-\${reqNum}-\${Date.now()}\`;
     console.info('nonce', reqNum, n); // → 响应区 Console
     return n;
   }
   return value;
 }
-```
+\`\`\`
 
-### WebSocket — `buildMessage`
+### WebSocket — \`buildMessage\`
 
-WS 下默认模板为 `buildMessage(message)`，每次点 **发送** 前执行，返回值作为实际发送内容。
+WS 下默认模板为 \`buildMessage(message)\`，每次点 **发送** 前执行，返回值作为实际发送内容。
 
-```js
+\`\`\`js
 function buildMessage(message) {
   // message 可能是对象（json）或字符串
   console.info('ws send', message);
   return message;
 }
-```
+\`\`\`
 
-也可在 Script 里点 **运行脚本**，用当前 Message 内容试跑 `buildMessage`（不真正连上服务端）。
+也可在 Script 里点 **运行脚本**，用当前 Message 内容试跑 \`buildMessage\`（不真正连上服务端）。
 
 ## 1.13 FetchCode To API 与 Java 转文档
 
@@ -497,8 +497,8 @@ function buildMessage(message) {
 ### Java 源码 → 字段文档
 
 1. 在请求/响应字段描述处打开 Java 分析抽屉
-2. **UploadJavaFile** 上传 `.java`（可多文件），或直接编辑标签页中的源码
-3. 支持 Swagger 注解（如 `ApiModel` / `ApiModelProperty`）；泛型请改成真实类名并补上对应类代码
+2. **UploadJavaFile** 上传 \`.java\`（可多文件），或直接编辑标签页中的源码
+3. 支持 Swagger 注解（如 \`ApiModel\` / \`ApiModelProperty\`）；泛型请改成真实类名并补上对应类代码
 4. **ToDocument** 生成字段说明；需要示例 JSON 时用 **To Body Param**
 
 > 这是「注解 → 文档字段」，不是侧栏 **Swagger 试跑**（OpenAPI 地址联调）。
@@ -523,9 +523,9 @@ function buildMessage(message) {
 
 1. 安装 [篡改猴](https://www.tampermonkey.net/) ≥ 5.3.3
 2. 开启「允许运行用户脚本」
-3. 添加跨域脚本（`@match` 改为你的工具访问路径）：
+3. 添加跨域脚本（\`@match\` 改为你的工具访问路径）：
 
-```js
+\`\`\`js
 // ==UserScript==
 // @name         CORS Script
 // @match        你的工具访问路径/*
@@ -536,7 +536,7 @@ function buildMessage(message) {
 (function () {
   unsafeWindow._GM_xmlHttpRequest = GM?.xmlHttpRequest || GM_xmlhttpRequest;
 })();
-```
+\`\`\`
 
 4. 齿轮开启 **PluginReq**，或单 API 的 Api Detail 开启 **PluginReq**
 
@@ -564,7 +564,7 @@ function buildMessage(message) {
 
 ## 怎么用
 
-```
+\`\`\`
 ① 侧栏打开 Swagger
 ② 输入 Swagger UI / docs 地址
    （如 http://host/scmp/swagger-ui/index.html）→ 点「加载」
@@ -573,14 +573,14 @@ function buildMessage(message) {
    按需改参数后点「执行」或下拉「执行 N 次」
 ⑤ 在「结果 N」查看响应
    需要调试脚本时用法同 API 管理（日志在 Console）
-```
+\`\`\`
 
 | 操作              | 说明                                 |
 |-----------------|------------------------------------|
 | **加载**          | 先拉资源列表；分组默认不全部展开                   |
 | **展开分组**        | 才加载该组文档，并显示 tag / 接口               |
 | **搜索**          | 按名称或路径过滤<br>若还有未展开的组，会先补齐再过滤并展开命中项 |
-| **无 tag 的接口**   | 会出现在类似 `未分组_0`、`未分组_1` 的目录下        |
+| **无 tag 的接口**   | 会出现在类似 \`未分组_0\`、\`未分组_1\` 的目录下        |
 | **执行 / 执行 N 次** | 与 API 管理相同（非 WS）<br>可出「结果1」…「结果N」  |
 
 ## 限制（重要）
@@ -626,7 +626,7 @@ function buildMessage(message) {
 | 类型        | 含义       | 示例                              |
 |-----------|----------|---------------------------------|
 | **时间戳**   | 指定时刻执行一次 | 选某个日期时间                         |
-| **CRON**  | 周期表达式    | `0 0/5 * * * ?`（每 5 分钟，以界面生成为准） |
+| **CRON**  | 周期表达式    | \`0 0/5 * * * ?\`（每 5 分钟，以界面生成为准） |
 | **RRULE** | 重复规则     | 如每日/每周；可用界面生成后微调                |
 
 ### 策略说明
@@ -671,14 +671,14 @@ function buildMessage(message) {
 
 ## 5.3 群操作流程
 
-```
+\`\`\`
 ① 齿轮配置用户名称 + 角色
 ② ⋯ → Create Group，输入群名
 ③ 聊天室点「邀请」，选择在线成员
 ④ 对方同意（或已在群则静默确认）后即可聊天
 ⑤ 右键群：修改群名 / 退出群聊
 ⑥ 成员列表可踢人（被踢方进入锁定态）
-```
+\`\`\`
 
 **要点：**
 
@@ -701,13 +701,13 @@ function buildMessage(message) {
 
 ### 使用闭环
 
-```
+\`\`\`
 ① 输入框 @ 本地 AI（或进入 sticky「AI会话」）
 ② 与 AI 本机多轮对话（默认不上线到群）
 ③ 需要同步给大家时 →「发送到群」（展示为 ·AI）
 ④ 也可在群话中 @ 其他成员的 AI，由对方本机助手接应
 ⑤「退出AI会话」结束本机会话态
-```
+\`\`\`
 
 | 能力       | 说明                         |
 |----------|----------------------------|
@@ -735,7 +735,7 @@ function buildMessage(message) {
 | **用户信息配置**    | 名称（协同/群显示名）<br>**角色**（产品/后端/前端/测试，影响群 AI）    |
 | **全局请求头**     | 本机缓存，**同名时优先级最高**                            |
 | **全局执行次数**    | 「执行 N 次」的 N                                  |
-| **远程域名**      | 团队共享；须 `http(s)://` 或 `ws(s)://` 开头          |
+| **远程域名**      | 团队共享；须 \`http(s)://\` 或 \`ws(s)://\` 开头          |
 | **本地域名**      | 仅本机（≠「本地 API」存储）                             |
 | **自动保存**      | 请求成功后自动更新有编辑的 API                            |
 | **PluginReq** | 地址为 localhost/127.0.0.1 的 **HTTP**<br>走篡改猴插件 |
@@ -753,7 +753,7 @@ function buildMessage(message) {
 | 跑一组流程          | 多标签打开 → 拖拽排好顺序<br>→ 右键顺序/并行执行                                   |
 | 标签顺序常驻         | 打开若干 API → 拖拽排序 → 刷新页<br>→ 标签大致按原顺序回来                           |
 | Swagger 临时联调   | 侧栏 Swagger → 填 docs 地址 → 加载 → 展开<br>→ 点接口 → 执行（不落库）             |
-| 脚本打日志          | Script 右键「运行脚本」或正式执行<br>→ 响应区 Console 看 `console.*` 与参数摘要       |
+| 脚本打日志          | Script 右键「运行脚本」或正式执行<br>→ 响应区 Console 看 \`console.*\` 与参数摘要       |
 | 写接口说明          | 选择 API → 编辑组合文档 → 分享                                            |
 | 本地 Spring Boot | 篡改猴 + PluginReq<br>→ 域名 localhost:8080 → 执行                     |
 | SSE 流式         | Api Detail 开 SSEReq → 执行<br>→「结果1」→ Data 看流式内容                  |
@@ -798,7 +798,7 @@ WebSocket 下 Header 映射为子协议，不是 HTTP 头。
 A：存在浏览器本地，无法生成服务端分享链接，需改为远程存储。
 
 **Q：PluginReq 开启后仍失败？**  
-A：确认篡改猴已安装、脚本 `@match` 匹配当前地址、扩展允许用户脚本。
+A：确认篡改猴已安装、脚本 \`@match\` 匹配当前地址、扩展允许用户脚本。
 
 **Q：修改 API 后别人看不到？**  
 A：需「更新 API」保存；对方点标签旁<font color="red">同步图标</font>。
@@ -807,7 +807,7 @@ A：需「更新 API」保存；对方点标签旁<font color="red">同步图标
 A：支持 JSON5 注释；Mac 可用 Option+Shift+F 格式化。
 
 **Q：RESTful 路径参数？**  
-A：Path 写 `{id}`，Query 配 `id` 及值。
+A：Path 写 \`{id}\`，Query 配 \`id\` 及值。
 
 **Q：WebSocket 用 Authorization 鉴权？**  
 A：不能作为 HTTP 头发送；用 Query 或首条消息。
@@ -822,7 +822,7 @@ A：不能发言/邀请/改名/踢人；
 
 **Q：AI 在哪里？以前的机器人入口呢？**  
 A：AI 已放在 **群聊** 聊天室工具条；侧栏没有独立机器人入口。  
-先配 Key 与智能体，再 `@AI助手`。
+先配 Key 与智能体，再 \`@AI助手\`。
 
 **Q：拒绝群邀请后对方怎么还显示我在？**  
 A：拒绝只在本机生效，邀请方收不到拒绝回执，  
@@ -844,3 +844,4 @@ A：拒绝只在本机生效，邀请方收不到拒绝回执，
 
 **适合：** 后端维护接口库、前端按文档联调、测试巡检与批量执行、  
 小团队在线对齐与 AI 辅助。
+`,h={},T={urlMapping:h,_is_md:!0,toJSON:()=>P,toString:()=>P,valueOf:()=>P},m={name:"NBA-API-DOC",components:{},setup(){return{}},emits:[],props:{},data(){return{folders:[]}},computed:{el(){return this.$refs.docWrapper.$el},content(){return[T]}},watch:{},created(){},mounted(){},methods:{handleNodeClick(t){const n=this.el.querySelector(`[data-tree-id='${t.uniFlag}']`);n&&n.scrollIntoView({behavior:"smooth"})},onDocChange(){let t=[],n=[],i=0;Array.from(this.el.querySelectorAll("h1,h2,h3,h4,h5,h6")).map((a,A)=>{const e=parseInt(a.tagName.slice(1),10),r=I("dti_");a.setAttribute("data-tree-id",r);const o={id:++i,pid:0,label:a.textContent.trim(),uniFlag:r};for(;n.length&&n[n.length-1].level>=e;)n.pop();n.length>0&&(o.pid=n[n.length-1].id),n.push({...o,level:e}),t.push(o)}),this.folders=u(t,"id","pid")}}},N={class:"nba-api-doc"};function b(t,n,i,a,A,e){const r=l("el-tree"),o=l("s3-scroll"),S=l("s3-doc");return p(),g("div",N,[s(o,{class:"folder"},{default:c(()=>[s(r,{data:A.folders,onNodeClick:e.handleNodeClick},null,8,["data","onNodeClick"])]),_:1}),s(o,null,{default:c(()=>[s(S,{ref:"docWrapper",class:"wrapper_detail",unUseNum:"",content:e.content,onChange:e.onDocChange},null,8,["content","onChange"])]),_:1})])}const R=d(m,[["render",b],["__scopeId","data-v-7e2cc310"]]);export{R as default};
